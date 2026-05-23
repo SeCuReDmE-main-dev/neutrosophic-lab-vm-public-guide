@@ -44,20 +44,23 @@ This repository and VM guide do not:
 
 ## Current Integrated Workspace Branches
 
-Each case-study workspace is expected to use the fork-only lab branch:
+Each case-study workspace uses the fork-only lab branch:
 
 ```text
 lab/integrated-neutrosophic-build
 ```
 
-Current mappings:
+The orchestrator workspace uses the `PaQBoT` branch.
 
-| Workspace | Public fork | Branch |
-| --- | --- | --- |
-| Agent Squad | `SeCuReDmE-main-dev/agent-squad_case_study` | `lab/integrated-neutrosophic-build` |
-| Aden | `SeCuReDmE-main-dev/aden_case_study` | `lab/integrated-neutrosophic-build` |
-| Ragas | `SeCuReDmE-main-dev/ragas_case_study` | `lab/integrated-neutrosophic-build` |
-| Haystack | `SeCuReDmE-main-dev/haystack_case_study` | `lab/integrated-neutrosophic-build` |
+Full topology with source contracts:
+
+| Workspace | Public fork | Branch | Source mode | Agent role |
+| --- | --- | --- | --- | --- |
+| Agent Squad | `SeCuReDmE-main-dev/agent-squad_case_study` | `lab/integrated-neutrosophic-build` | git-clone | public-case-study |
+| Aden | `SeCuReDmE-main-dev/aden_case_study` | `lab/integrated-neutrosophic-build` | git-clone | public-case-study |
+| Ragas | `SeCuReDmE-main-dev/ragas_case_study` | `lab/integrated-neutrosophic-build` | git-clone | public-case-study |
+| Haystack | `SeCuReDmE-main-dev/haystack_case_study` | `lab/integrated-neutrosophic-build` | git-clone | public-case-study |
+| Orchestrator | `SeCuReDmE-main-dev/moteur-neutrosophique-adaptable` | `PaQBoT` | public-host-sync | public-lab-orchestrator |
 
 These branches are public lab builds in forks. They are not claims of upstream approval.
 
@@ -127,19 +130,72 @@ bash ./04_VALIDATION_LAB/pipeline/validate_openclaw_multi_agent_lab.sh openclaw-
 bash ./04_VALIDATION_LAB/pipeline/run_public_workspace_routine.sh openclaw-e2e-test daily
 ```
 
+## Operational Command Reference
+
+All commands run from WSL inside the orchestrator repo checkout.
+
+| Purpose | Command |
+| --- | --- |
+| Static audit (no VM needed) | `bash ./04_VALIDATION_LAB/pipeline/audit_static_lab.sh` |
+| Spawn VM | `bash ./04_VALIDATION_LAB/pipeline/spawn_openclaw_lab.sh openclaw-e2e-test` |
+| Setup lab inside VM | `bash ./04_VALIDATION_LAB/pipeline/setup_openclaw_multi_agent_lab.sh openclaw-e2e-test` |
+| Validate VM topology | `bash ./04_VALIDATION_LAB/pipeline/validate_openclaw_multi_agent_lab.sh openclaw-e2e-test` |
+| Daily routine | `bash ./04_VALIDATION_LAB/pipeline/run_public_workspace_routine.sh openclaw-e2e-test daily` |
+| Weekly routine | `bash ./04_VALIDATION_LAB/pipeline/run_public_workspace_routine.sh openclaw-e2e-test weekly` |
+| Full acceptance | `bash ./04_VALIDATION_LAB/pipeline/run_lab_acceptance.sh openclaw-e2e-test` |
+| Scheduler status | `bash ./04_VALIDATION_LAB/pipeline/scheduler_status.sh openclaw-e2e-test` |
+| Active process status | `bash ./04_VALIDATION_LAB/pipeline/active_workspace_process_status.sh openclaw-e2e-test` |
+| Smoke dashboard | `bash ./04_VALIDATION_LAB/pipeline/smoke_dashboard.sh openclaw-e2e-test` |
+| Smoke model policy | `bash ./04_VALIDATION_LAB/pipeline/smoke_model_policy.sh openclaw-e2e-test` |
+| Smoke export/ingest | `bash ./04_VALIDATION_LAB/pipeline/smoke_export_ingest.sh openclaw-e2e-test` |
+
+## Scheduler
+
+The lab uses VM-side systemd user timers, not raw cron. Install the scheduler infrastructure first:
+
+```bash
+bash ./04_VALIDATION_LAB/pipeline/install_lab_scheduler.sh openclaw-e2e-test
+```
+
+Timer names:
+
+- `openclaw-lab-daily.timer` — daily public routine
+- `openclaw-lab-weekly.timer` — weekly NSS report
+- `run_manual_acceptance_worker.sh` — manual acceptance trigger
+
 ## Evidence Outputs
 
-Public evidence bundles include:
+Public evidence bundles are written to:
+
+```text
+/home/ubuntu/openclaw-lab/exports/evidence/<run-id>/
+```
+
+Each complete bundle contains:
 
 ```text
 evidence-index.json
 evidence-summary.md
-daily_lab_report.md
-weekly_nss_lab_report.md
-reproducibility_appendix.md
+orchestrator_reports/daily_lab_report.json
+orchestrator_reports/daily_lab_report.md
+orchestrator_reports/weekly_nss_lab_report.md
+orchestrator_reports/reproducibility_appendix.md
 ```
 
-The evidence index records repository, branch, commit, model, routine type, artifact path, and timestamp for each public workspace run.
+The evidence index records repository, branch, commit, model, routine type, artifact path, and timestamp for each public workspace run. A complete routine produces exactly four public case-study entries in `evidence-index.json`.
+
+The orchestrator summarizes evidence with:
+
+```bash
+python -m neutro_engine summarize-evidence <bundle_path> --output <target_dir>
+```
+
+## Runtime Constraints
+
+- Only one active heavy workspace process at a time (semi-autonomous limit: 1 concurrent worker, max 3600 seconds).
+- Rerun policy: deterministic-reset. Lab agents are intentionally recreated on rerun so workspace bindings and model policy stay exact. Exported traces and evidence bundles are the continuity mechanism, not transient agent state.
+- Node.js pinned to `22.22.3` from the manifest.
+- Default model: `ollama/gemma4:31b-cloud`. Escalation model: `ollama/kimi-k2.6:cloud`.
 
 ## Documentation Index
 
