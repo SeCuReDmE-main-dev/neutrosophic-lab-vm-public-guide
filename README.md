@@ -4,6 +4,8 @@ This is a public documentation repository for sharing the neutrosophic VM lab de
 
 **Important:** this repository is documentation-only. It is not a software contribution venue, not an upstream development repo, and not a support channel. Pull requests will not be evaluated. GitHub issues will not be triaged as support tickets. Code changes are not accepted or maintained through this public guide.
 
+When issues, milestones, or projects are used in this repository, they are used as a public roadmap surface, not as a support desk.
+
 ## What This Lab Does
 
 The lab packages a reproducible public research environment for applied neutrosophic AI case studies.
@@ -214,6 +216,8 @@ python -m neutro_engine summarize-evidence <bundle_path> --output <target_dir>
 - [Reproducibility Checklist](docs/12-reproducibility-checklist.md)
 - [OpenClaw Workspace Personas](docs/13-openclaw-workspace-personas.md)
 - [Daily and Weekly Routine Contracts](docs/14-daily-weekly-routine-contracts.md)
+- [Lab Stabilization Roadmap](docs/15-lab-stabilization-roadmap.md)
+- [How We Use GitHub Projects and Milestones](docs/16-how-we-use-github-projects-and-milestones.md)
 
 ## Public Boundary
 
