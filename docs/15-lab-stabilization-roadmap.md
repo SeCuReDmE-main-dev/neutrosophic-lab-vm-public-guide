@@ -21,7 +21,7 @@ The roadmap is grouped into 10 milestones and 250 micro-actions. It is intention
 
 ## M0 — Baseline Freeze and Tracking Setup
 
-Status: closed as a baseline documentation and governance freeze. This does not mean daily testing has launched or that later runtime validation milestones are complete.
+Status: closed as a verified baseline documentation and governance freeze. This does not mean daily testing has launched or that later runtime validation milestones are complete.
 
 - [x] M0-01 Freeze the official scope of lab v1.
 - [x] M0-02 Freeze the official list of the 5 workspaces.
