@@ -1,24 +1,4 @@
-# How We Use GitHub Projects and Milestones
 
-This guide explains how the lab is tracked publicly.
-
-## Short Answer
-
-Yes, GitHub Projects is worth using even for a solo developer, but only if it is treated as a cockpit, not as the only source of truth.
-
-## Roles of Each Surface
-
-### 1. Milestones
-
-Milestones answer:
-
-- Which major phase are we in?
-- What must be true before that phase closes?
-- Which epic issue belongs to that phase?
-
-In this lab, milestones are phase-level containers.
-
-### 2. GitHub Project
 
 The Project answers:
 
@@ -47,9 +27,7 @@ The docs answer:
 
 Docs are the durable human-readable layer.
 
-## Why Not Use 250 Public Issues?
-
-For a single developer, 250 individual public issues is usually more overhead than value.
+---
 
 The chosen model is:
 
@@ -91,13 +69,3 @@ The public Project is not the same as the private operational source of truth.
 
 The private implementation repository owns the exhaustive action list. The public repository explains and visualizes progress.
 
-## Practical Recommendation for Solo Use
-
-If the work becomes noisy:
-
-- keep the 250 micro-actions in the private TODO source;
-- keep milestones and epic issues public;
-- keep the Project curated and readable;
-- update the public docs when phase truth changes.
-
-That gives the best balance between transparency and maintainability.
