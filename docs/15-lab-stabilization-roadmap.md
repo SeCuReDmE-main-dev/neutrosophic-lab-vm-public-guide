@@ -241,7 +241,7 @@ The roadmap is grouped into 10 milestones and 250 micro-actions. It is intention
 - [ ] M7-22 Define the `renderer missing` runbook.
 - [ ] M7-23 Define the `persona drift detected` runbook.
 - [ ] M7-24 Define the `public shareability broken` runbook.
-- [ ] M7-25 Define the BleEeM signal-to-action escalation matrix.
+- [ ] M7-25 Define the signal-to-action escalation matrix.
 
 ## M8 — Public Shareability Hardening
 

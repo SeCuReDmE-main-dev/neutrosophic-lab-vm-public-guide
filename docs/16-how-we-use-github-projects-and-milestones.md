@@ -1,71 +1,75 @@
 # How We Use GitHub Projects and Milestones
 
-This guide explains how the lab is tracked publicly.
+## Purpose
 
-## Short Answer
+Define the governance model used to track the Neutrosophic Lab hardening roadmap in the public repository.
 
-Yes, GitHub Projects is worth using even for a solo developer, but only if it is treated as a cockpit, not as the only source of truth.
+## Scope
 
-## Roles of Each Surface
+This document applies to:
 
-### 1. Milestones
+- public milestones
+- public epic issues
+- public GitHub Project
+- public roadmap documents
 
-Milestones answer:
+This document does not replace private operational tracking.
 
-- Which major phase are we in?
-- What must be true before that phase closes?
-- Which epic issue belongs to that phase?
+## Source-of-Truth Policy
 
-In this lab, milestones are phase-level containers.
+- Private repository: exhaustive operational tracking (all micro-actions and run-level details).
+- Public repository: summarized phase-level tracking for transparency and external readability.
 
-### 2. GitHub Project
+If private and public tracking disagree, private operational truth is authoritative until public docs are updated.
 
-The Project answers:
+## Tracking Model
 
-- What is in progress right now?
-- What is blocked?
-- Which workstream is getting attention?
-- What is the path toward daily test launch?
+The public tracking model uses:
 
-It is a visual operations surface:
+- 10 milestones (`M0` to `M9`)
+- 10 epic issues (one per milestone)
+- 1 GitHub Project for progress visualization
+- 1 public roadmap document aligned with milestones
 
-- table view
-- board view
-- roadmap view
-- blocked-items view
-- shareability view
+## Artifact Responsibilities
 
-### 3. Public Docs
+### Milestones
 
-The docs answer:
+Milestones define:
 
-- What the lab is
-- What the lab is not
-- How it works
-- What remains to be hardened
-- Why the roadmap exists
+- phase boundaries
+- target closure conditions
+- expected sequence of delivery
 
-Docs are the durable human-readable layer.
+### Epic Issues
 
-## Why Not Use 250 Public Issues?
+Epic issues define:
 
-For a single developer, 250 individual public issues is usually more overhead than value.
+- milestone intent
+- current phase status
+- major blockers and gating decisions
 
-The chosen model is:
+### GitHub Project
 
-- 10 milestones
-- 10 epic issues
-- 1 GitHub Project
-- 1 complete public roadmap document
+The project visualizes:
 
-This keeps the public surface readable while preserving full transparency.
+- active work
+- blocked work
+- validation flow
+- readiness toward daily test launch
 
-## Recommended Project Fields
+### Public Documentation
 
-The Project should use:
+Public docs provide:
+
+- stable reader-facing explanation
+- current constraints and limits
+- rationale for roadmap structure
+
+## Required Project Fields
 
 - `Status`: Backlog / Ready / In Progress / Blocked / Validation / Done
-- `Milestone`: M0 through M9
+- `Milestone`: M0 to M9
 - `Workstream`: Infra / Runtime / Persona / Routine / Evidence / NSS / Observability / Docs / Public Guide / Governance
 - `Priority`: P0 / P1 / P2 / P3
 - `Gate`: Baseline / Daily / Weekly / Shareability / Public
@@ -74,9 +78,7 @@ The Project should use:
 - `Blocked By`
 - `Owner`
 
-## Recommended Views
-
-The Project should expose:
+## Required Project Views
 
 - `Master Table`
 - `Status Board`
@@ -85,19 +87,17 @@ The Project should expose:
 - `Blocked Items`
 - `Public Shareability`
 
-## Important Constraint
+## Update Rules
 
-The public Project is not the same as the private operational source of truth.
+- Update public milestones and epics when phase truth changes.
+- Keep public project cards aligned with current operational reality.
+- Keep roadmap docs synchronized with milestone and epic status.
+- Do not expose private operational details, secrets, or non-public paths.
 
-The private implementation repository owns the exhaustive action list. The public repository explains and visualizes progress.
+## Quality Gate
 
-## Practical Recommendation for Solo Use
+This document is valid only if:
 
-If the work becomes noisy:
-
-- keep the 250 micro-actions in the private TODO source;
-- keep milestones and epic issues public;
-- keep the Project curated and readable;
-- update the public docs when phase truth changes.
-
-That gives the best balance between transparency and maintainability.
+- terminology is stable and non-internal
+- no private prompt language appears
+- public and private tracking boundaries remain explicit
