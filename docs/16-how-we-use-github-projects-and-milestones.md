@@ -1,49 +1,75 @@
+﻿# How We Use GitHub Projects and Milestones
 
+## Purpose
 
-The Project answers:
+Define the governance model used to track the Neutrosophic Lab hardening roadmap in the public repository.
 
-- What is in progress right now?
-- What is blocked?
-- Which workstream is getting attention?
-- What is the path toward daily test launch?
+## Scope
 
-It is a visual operations surface:
+This document applies to:
 
-- table view
-- board view
-- roadmap view
-- blocked-items view
-- shareability view
+- public milestones
+- public epic issues
+- public GitHub Project
+- public roadmap documents
 
-### 3. Public Docs
+This document does not replace private operational tracking.
 
-The docs answer:
+## Source-of-Truth Policy
 
-- What the lab is
-- What the lab is not
-- How it works
-- What remains to be hardened
-- Why the roadmap exists
+- Private repository: exhaustive operational tracking (all micro-actions and run-level details).
+- Public repository: summarized phase-level tracking for transparency and external readability.
 
-Docs are the durable human-readable layer.
+If private and public tracking disagree, private operational truth is authoritative until public docs are updated.
 
----
+## Tracking Model
 
-The chosen model is:
+The public tracking model uses:
 
-- 10 milestones
-- 10 epic issues
-- 1 GitHub Project
-- 1 complete public roadmap document
+- 10 milestones (`M0` to `M9`)
+- 10 epic issues (one per milestone)
+- 1 GitHub Project for progress visualization
+- 1 public roadmap document aligned with milestones
 
-This keeps the public surface readable while preserving full transparency.
+## Artifact Responsibilities
 
-## Recommended Project Fields
+### Milestones
 
-The Project should use:
+Milestones define:
+
+- phase boundaries
+- target closure conditions
+- expected sequence of delivery
+
+### Epic Issues
+
+Epic issues define:
+
+- milestone intent
+- current phase status
+- major blockers and gating decisions
+
+### GitHub Project
+
+The project visualizes:
+
+- active work
+- blocked work
+- validation flow
+- readiness toward daily test launch
+
+### Public Documentation
+
+Public docs provide:
+
+- stable reader-facing explanation
+- current constraints and limits
+- rationale for roadmap structure
+
+## Required Project Fields
 
 - `Status`: Backlog / Ready / In Progress / Blocked / Validation / Done
-- `Milestone`: M0 through M9
+- `Milestone`: M0 to M9
 - `Workstream`: Infra / Runtime / Persona / Routine / Evidence / NSS / Observability / Docs / Public Guide / Governance
 - `Priority`: P0 / P1 / P2 / P3
 - `Gate`: Baseline / Daily / Weekly / Shareability / Public
@@ -52,9 +78,7 @@ The Project should use:
 - `Blocked By`
 - `Owner`
 
-## Recommended Views
-
-The Project should expose:
+## Required Project Views
 
 - `Master Table`
 - `Status Board`
@@ -63,9 +87,17 @@ The Project should expose:
 - `Blocked Items`
 - `Public Shareability`
 
-## Important Constraint
+## Update Rules
 
-The public Project is not the same as the private operational source of truth.
+- Update public milestones and epics when phase truth changes.
+- Keep public project cards aligned with current operational reality.
+- Keep roadmap docs synchronized with milestone and epic status.
+- Do not expose private operational details, secrets, or non-public paths.
 
-The private implementation repository owns the exhaustive action list. The public repository explains and visualizes progress.
+## Quality Gate
 
+This document is valid only if:
+
+- terminology is stable and non-internal
+- no private prompt language appears
+- public and private tracking boundaries remain explicit
