@@ -51,7 +51,7 @@ Status: closed as a verified baseline documentation and governance freeze. This 
 
 ## M1 — Host and VM Determinism
 
-Status: closed as verified host and VM determinism hardening. This does not mean daily testing has launched or that later runtime validation milestones are complete.
+Status: closed after verified host and VM determinism checks. Daily testing is still gated. This does not mean daily testing has launched or that later runtime validation milestones are complete.
 
 - [x] M1-01 Verify `spawn_openclaw_lab.sh` is idempotent on the host.
 - [x] M1-02 Verify `setup_openclaw_multi_agent_lab.sh` is idempotent.
