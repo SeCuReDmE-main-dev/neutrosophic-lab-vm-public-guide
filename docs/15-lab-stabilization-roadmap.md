@@ -21,31 +21,33 @@ The roadmap is grouped into 10 milestones and 250 micro-actions. It is intention
 
 ## M0 — Baseline Freeze and Tracking Setup
 
-- [ ] M0-01 Freeze the official scope of lab v1.
-- [ ] M0-02 Freeze the official list of the 5 workspaces.
-- [ ] M0-03 Freeze the `1 VM / 1 gateway / 5 workspaces` policy.
-- [ ] M0-04 Freeze the `public-only workspaces` policy.
-- [ ] M0-05 Freeze the `WSL-primary host execution` policy.
-- [ ] M0-06 Freeze the manifest Node version as baseline.
-- [ ] M0-07 Freeze the default and escalation model policy.
-- [ ] M0-08 Freeze the canonical VM path structure.
-- [ ] M0-09 Freeze the definition of a daily test.
-- [ ] M0-10 Freeze the definition of a weekly NSS run.
-- [ ] M0-11 Freeze the definition of a shareable lab.
-- [ ] M0-12 Freeze the definition of public-safe evidence.
-- [ ] M0-13 Establish the required baseline artifact list.
-- [ ] M0-14 Establish the critical script list.
-- [ ] M0-15 Establish the critical document list.
-- [ ] M0-16 Establish the manual validation checkpoint list.
-- [ ] M0-17 Establish the automated validation checkpoint list.
-- [ ] M0-18 Maintain the private exhaustive TODO source.
-- [ ] M0-19 Maintain the milestone map.
-- [ ] M0-20 Maintain the tracking policy.
-- [ ] M0-21 Define the status format for micro-actions.
-- [ ] M0-22 Define the expected-proof format for micro-actions.
-- [ ] M0-23 Define the closure rule for one micro-action.
-- [ ] M0-24 Define the closure rule for one milestone.
-- [ ] M0-25 Define the promotion rule for `daily tests may start`.
+Status: closed as a baseline documentation and governance freeze. This does not mean daily testing has launched or that later runtime validation milestones are complete.
+
+- [x] M0-01 Freeze the official scope of lab v1.
+- [x] M0-02 Freeze the official list of the 5 workspaces.
+- [x] M0-03 Freeze the `1 VM / 1 gateway / 5 workspaces` policy.
+- [x] M0-04 Freeze the `public-only workspaces` policy.
+- [x] M0-05 Freeze the `WSL-primary host execution` policy.
+- [x] M0-06 Freeze the manifest Node version as baseline.
+- [x] M0-07 Freeze the default and escalation model policy.
+- [x] M0-08 Freeze the canonical VM path structure.
+- [x] M0-09 Freeze the definition of a daily test.
+- [x] M0-10 Freeze the definition of a weekly NSS run.
+- [x] M0-11 Freeze the definition of a shareable lab.
+- [x] M0-12 Freeze the definition of public-safe evidence.
+- [x] M0-13 Establish the required baseline artifact list.
+- [x] M0-14 Establish the critical script list.
+- [x] M0-15 Establish the critical document list.
+- [x] M0-16 Establish the manual validation checkpoint list.
+- [x] M0-17 Establish the automated validation checkpoint list.
+- [x] M0-18 Maintain the private exhaustive TODO source.
+- [x] M0-19 Maintain the milestone map.
+- [x] M0-20 Maintain the tracking policy.
+- [x] M0-21 Define the status format for micro-actions.
+- [x] M0-22 Define the expected-proof format for micro-actions.
+- [x] M0-23 Define the closure rule for one micro-action.
+- [x] M0-24 Define the closure rule for one milestone.
+- [x] M0-25 Define the promotion rule for `daily tests may start`.
 
 ## M1 — Host and VM Determinism
 

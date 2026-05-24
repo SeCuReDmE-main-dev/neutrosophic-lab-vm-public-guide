@@ -68,7 +68,8 @@ Public docs provide:
 
 ## Required Project Fields
 
-- `Status`: Backlog / Ready / In Progress / Blocked / Validation / Done
+- `Status`: Todo / In Progress / Done
+- `Lab State`: Backlog / Ready / In Progress / Blocked / Validation / Done
 - `Milestone`: M0 to M9
 - `Workstream`: Infra / Runtime / Persona / Routine / Evidence / NSS / Observability / Docs / Public Guide / Governance
 - `Priority`: P0 / P1 / P2 / P3
