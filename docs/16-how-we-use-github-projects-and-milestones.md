@@ -1,4 +1,4 @@
-# How We Use GitHub Projects and Milestones
+﻿# How We Use GitHub Projects and Milestones
 
 ## Purpose
 
