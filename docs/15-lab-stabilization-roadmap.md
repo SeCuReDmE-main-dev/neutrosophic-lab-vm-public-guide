@@ -51,31 +51,33 @@ Status: closed as a verified baseline documentation and governance freeze. This 
 
 ## M1 — Host and VM Determinism
 
-- [ ] M1-01 Verify `spawn_openclaw_lab.sh` is idempotent on the host.
-- [ ] M1-02 Verify `setup_openclaw_multi_agent_lab.sh` is idempotent.
-- [ ] M1-03 Verify `validate_openclaw_multi_agent_lab.sh` detects critical drift.
-- [ ] M1-04 Verify `cloud-init.template.yaml` to `cloud-init.yaml` coherence.
-- [ ] M1-05 Verify cloud-init rendering is fully manifest-driven.
-- [ ] M1-06 Verify the Node `22.22.3` pin.
-- [ ] M1-07 Verify the expected Python runtime inside the VM.
-- [ ] M1-08 Verify the LibreOffice renderer pin.
-- [ ] M1-09 Verify `loginctl enable-linger` installation.
-- [ ] M1-10 Verify WSL is the only primary host surface.
-- [ ] M1-11 Verify PowerShell wrappers remain convenience-only.
-- [ ] M1-12 Verify Multipass resolution through the shared resolver.
-- [ ] M1-13 Verify WSL/Windows path resolution stability.
-- [ ] M1-14 Verify host-to-VM transfer stability.
-- [ ] M1-15 Verify VM-to-host transfer stability.
-- [ ] M1-16 Verify absence of Windows paths in public artifacts.
-- [ ] M1-17 Verify absence of host secrets in seeded workspaces.
-- [ ] M1-18 Verify the default VM name.
-- [ ] M1-19 Verify the default CPU, memory, and disk quotas.
-- [ ] M1-20 Verify the boot and setup timeout budget.
-- [ ] M1-21 Verify reproducibility of `audit_static_lab.sh`.
-- [ ] M1-22 Verify reproducibility of `run_lab_acceptance.sh`.
-- [ ] M1-23 Define the full VM rebuild procedure.
-- [ ] M1-24 Define the non-destructive reset procedure.
-- [ ] M1-25 Define the destroy-and-recreate procedure.
+Status: closed as verified host and VM determinism hardening. This does not mean daily testing has launched or that later runtime validation milestones are complete.
+
+- [x] M1-01 Verify `spawn_openclaw_lab.sh` is idempotent on the host.
+- [x] M1-02 Verify `setup_openclaw_multi_agent_lab.sh` is idempotent.
+- [x] M1-03 Verify `validate_openclaw_multi_agent_lab.sh` detects critical drift.
+- [x] M1-04 Verify `cloud-init.template.yaml` to `cloud-init.yaml` coherence.
+- [x] M1-05 Verify cloud-init rendering is fully manifest-driven.
+- [x] M1-06 Verify the Node `22.22.3` pin.
+- [x] M1-07 Verify the expected Python runtime inside the VM.
+- [x] M1-08 Verify the LibreOffice renderer pin.
+- [x] M1-09 Verify `loginctl enable-linger` installation.
+- [x] M1-10 Verify WSL is the only primary host surface.
+- [x] M1-11 Verify PowerShell wrappers remain convenience-only.
+- [x] M1-12 Verify Multipass resolution through the shared resolver.
+- [x] M1-13 Verify WSL/Windows path resolution stability.
+- [x] M1-14 Verify host-to-VM transfer stability.
+- [x] M1-15 Verify VM-to-host transfer stability.
+- [x] M1-16 Verify absence of Windows paths in public artifacts.
+- [x] M1-17 Verify absence of host secrets in seeded workspaces.
+- [x] M1-18 Verify the default VM name.
+- [x] M1-19 Verify the default CPU, memory, and disk quotas.
+- [x] M1-20 Verify the boot and setup timeout budget.
+- [x] M1-21 Verify reproducibility of `audit_static_lab.sh`.
+- [x] M1-22 Verify reproducibility of `run_lab_acceptance.sh`.
+- [x] M1-23 Define the full VM rebuild procedure.
+- [x] M1-24 Define the non-destructive reset procedure.
+- [x] M1-25 Define the destroy-and-recreate procedure.
 
 ## M2 — OpenClaw Runtime Stability
 
