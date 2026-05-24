@@ -213,6 +213,7 @@ python -m neutro_engine summarize-evidence <bundle_path> --output <target_dir>
 - [Path Safety Policy](docs/11-path-safety-policy.md)
 - [Reproducibility Checklist](docs/12-reproducibility-checklist.md)
 - [OpenClaw Workspace Personas](docs/13-openclaw-workspace-personas.md)
+- [Daily and Weekly Routine Contracts](docs/14-daily-weekly-routine-contracts.md)
 
 ## Public Boundary
 
