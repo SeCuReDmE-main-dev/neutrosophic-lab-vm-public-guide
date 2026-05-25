@@ -81,31 +81,33 @@ Status: closed after final verified host and VM determinism checks. The final M1
 
 ## M2 — OpenClaw Runtime Stability
 
-- [ ] M2-01 Verify gateway startup inside the VM.
-- [ ] M2-02 Verify expected LAN bind behavior.
-- [ ] M2-03 Verify `openclaw-gateway.service` status handling.
-- [ ] M2-04 Verify dashboard port availability.
-- [ ] M2-05 Verify tokenized dashboard URL emission.
-- [ ] M2-06 Verify gateway restart after stop.
-- [ ] M2-07 Verify clean shutdown of active workspace processes.
-- [ ] M2-08 Verify simple runtime log rotation expectations.
-- [ ] M2-09 Verify no zombie processes after workspace switches.
-- [ ] M2-10 Verify robustness of `active-process.json`.
-- [ ] M2-11 Verify stale gateway cleanup precision.
-- [ ] M2-12 Verify host wrappers do not assume a fixed OpenClaw binary path.
-- [ ] M2-13 Verify default model is applied to all lab agents.
-- [ ] M2-14 Verify escalation model is declared and visible.
-- [ ] M2-15 Verify non-concurrency policy for heavy workers.
-- [ ] M2-16 Verify the max runtime limit.
-- [ ] M2-17 Verify `app first, delegation second` discipline.
-- [ ] M2-18 Verify compatibility with systemd user scheduler.
-- [ ] M2-19 Verify filesystem permissions used by runtime flows.
-- [ ] M2-20 Verify stability of the report path resolver.
-- [ ] M2-21 Verify stability of the path guard.
-- [ ] M2-22 Verify dashboard smoke test remains non-destructive.
-- [ ] M2-23 Verify `smoke_model_policy.sh` remains stable.
-- [ ] M2-24 Define the quick gateway diagnosis procedure.
-- [ ] M2-25 Define the blocked worker recovery procedure.
+Status: closed after final verified OpenClaw runtime checks. The hardened M2 verifier passed with real WSL/Multipass runtime probes and the existing dashboard/model-policy smoke scripts. Daily testing is still gated. This does not mean M3+ or daily launch milestones are complete.
+
+- [x] M2-01 Verify gateway startup inside the VM.
+- [x] M2-02 Verify expected LAN bind behavior.
+- [x] M2-03 Verify `openclaw-gateway.service` status handling.
+- [x] M2-04 Verify dashboard port availability.
+- [x] M2-05 Verify tokenized dashboard URL emission.
+- [x] M2-06 Verify gateway restart after stop.
+- [x] M2-07 Verify clean shutdown of active workspace processes.
+- [x] M2-08 Verify simple runtime log rotation expectations.
+- [x] M2-09 Verify no zombie processes after workspace switches.
+- [x] M2-10 Verify robustness of `active-process.json`.
+- [x] M2-11 Verify stale gateway cleanup precision.
+- [x] M2-12 Verify host wrappers do not assume a fixed OpenClaw binary path.
+- [x] M2-13 Verify default model is applied to all lab agents.
+- [x] M2-14 Verify escalation model is declared and visible.
+- [x] M2-15 Verify non-concurrency policy for heavy workers.
+- [x] M2-16 Verify the max runtime limit.
+- [x] M2-17 Verify `app first, delegation second` discipline.
+- [x] M2-18 Verify compatibility with systemd user scheduler.
+- [x] M2-19 Verify filesystem permissions used by runtime flows.
+- [x] M2-20 Verify stability of the report path resolver.
+- [x] M2-21 Verify stability of the path guard.
+- [x] M2-22 Verify dashboard smoke test remains non-destructive.
+- [x] M2-23 Verify `smoke_model_policy.sh` remains stable.
+- [x] M2-24 Define the quick gateway diagnosis procedure.
+- [x] M2-25 Define the blocked worker recovery procedure.
 
 ## M3 — Persona and Contract Integrity
 
