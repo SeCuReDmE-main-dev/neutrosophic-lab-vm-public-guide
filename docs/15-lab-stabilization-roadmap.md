@@ -12,6 +12,7 @@ The roadmap is grouped into 10 milestones and 250 micro-actions. It is intention
 | `M1` | June 7, 2026 | Host and VM determinism |
 | `M2` | June 14, 2026 | OpenClaw runtime stability |
 | `M3` | June 21, 2026 | Persona and contract integrity |
+| `M3.5` | June 24, 2026 | Prompt governance design and contract hardening |
 | `M4` | June 28, 2026 | Daily routine readiness |
 | `M5` | July 5, 2026 | Evidence safety and data quality |
 | `M6` | July 12, 2026 | Weekly NSS package quality |
@@ -136,6 +137,31 @@ Status: closed after final verified OpenClaw runtime checks. The hardened M2 ver
 - [ ] M3-23 Define the persona change acceptance procedure.
 - [ ] M3-24 Define the `persona contract green` gate.
 - [ ] M3-25 Define the `orchestrator authority green` gate.
+
+## M3.5 — Prompt Governance Design and Contract Hardening
+
+Status: design and contract hardening closed. The live assignment engine, execution logger, orchestrator runtime observer, and operational ten-day/twenty-eight-day cycles are planned implementation work, not yet live.
+
+- [x] M3.5-01 Define orchestrator-owned prompt governance scope.
+- [x] M3.5-02 Define the seven shared prompt families and three lane-specific families per lane.
+- [x] M3.5-03 Design the master prompt registry (40 prompts, 10 per lane, 7 shared + 3 specific).
+- [x] M3.5-04 Draft the forty concrete prompt texts across all four lanes.
+- [x] M3.5-05 Define the daily assignment algorithm (round-robin with seven-day cooldown).
+- [x] M3.5-06 Define the ten-day full-coverage rule per lane.
+- [x] M3.5-07 Define the orchestrator runtime observation protocol.
+- [x] M3.5-08 Define weekly trend analysis and monthly twenty-eight-day recomposition.
+- [x] M3.5-09 Define the integration contract with the routine contract model.
+- [x] M3.5-10 Define M3.5 validation criteria and closure gate.
+- [ ] M3.5-11 Build the live daily assignment engine.
+- [ ] M3.5-12 Build the execution logging infrastructure.
+- [ ] M3.5-13 Build the orchestrator runtime observer.
+- [ ] M3.5-14 Run a ten-day trial cycle with real lane execution.
+- [ ] M3.5-15 Build the weekly trend analysis pipeline.
+- [ ] M3.5-16 Build the NSS integration pipeline for prompt-governance signals.
+- [ ] M3.5-17 Complete the first twenty-eight-day recomposition cycle.
+- [ ] M3.5-18 Verify prompt-governance signals feed into weekly and monthly synthesis.
+- [ ] M3.5-19 Verify lane outputs remain lane-local under prompt governance.
+- [ ] M3.5-20 Verify cross-lane synthesis remains exclusively orchestrator-owned.
 
 ## M4 — Daily Routine Readiness
 

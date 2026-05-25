@@ -189,6 +189,39 @@ The expected outputs are:
 
 The `.doc` template used by the project is treated as a structural reference, not as the binary source of truth. The canonical weekly content remains structured and auditable before document rendering.
 
+## Prompt governance (M3.5)
+
+The lab includes a prompt-governance layer that defines what each case-study lane evaluates during delegated analysis. This layer sits between persona contract integrity (M3) and daily routine readiness (M4).
+
+### Ownership
+
+The orchestrator owns prompt assignment across all four lanes. No lane assigns its own prompts. No lane modifies prompt content or assignment rules. Lanes consume prompts as read-only consumers.
+
+### Catalog structure
+
+Each lane draws from a catalog of ten prompts:
+
+- seven shared-family prompts (health smoke, working-state deep-dive, delegation boundary, uncertainty and ambiguity, failure-mode simulation, reproducibility check, NSS readiness)
+- three lane-specific prompts that exercise the lane's unique upstream identity
+
+The full catalog contains forty prompts across four lanes. The orchestrator maintains one canonical master registry. Each lane receives a filtered view containing only its ten prompts.
+
+### Daily assignment
+
+Each lane receives one prompt per day. Assignment uses round-robin selection with a seven-day anti-repeat rule: no prompt may be reused for the same lane within seven days. Each lane covers its full ten-prompt catalog across a ten-day cycle.
+
+### Signal flow
+
+Prompt-execution records feed into weekly trend analysis (improved, degraded, no-impact, or inconclusive per lane) and monthly twenty-eight-day recomposition. Prompt-governance signals are integrated into the weekly NSS package.
+
+### Boundaries
+
+Lane outputs remain lane-local. Cross-lane synthesis belongs exclusively to the orchestrator. Prompt governance does not change the VM runtime model policy, the default model, or the escalation model.
+
+### Maturity
+
+M3.5 closes design and contract hardening. The live assignment engine, execution logger, orchestrator runtime observer, and operational ten-day/twenty-eight-day cycles are planned implementation work, not yet live.
+
 ## Why the public repo remains codeless
 
 This guide repository stays documentation-only.

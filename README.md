@@ -199,6 +199,21 @@ python -m neutro_engine summarize-evidence <bundle_path> --output <target_dir>
 - Node.js pinned to `22.22.3` from the manifest.
 - Default model: `ollama/gemma4:31b-cloud`. Escalation model: `ollama/kimi-k2.6:cloud`.
 
+## Prompt Governance (M3.5)
+
+The lab includes a prompt-governance layer that defines what each case-study lane evaluates during delegated analysis. This layer sits between persona contract integrity (M3) and daily routine readiness (M4).
+
+Key properties:
+
+- The orchestrator owns prompt assignment across all four lanes. No lane assigns its own prompts.
+- Each lane receives one rotating prompt per day from a catalog of ten prompts (seven shared families, three lane-specific).
+- A seven-day anti-repeat rule prevents the same prompt from being reused for the same lane within a week.
+- Each lane covers its full ten-prompt catalog across a ten-day cycle.
+- Lane outputs remain lane-local. Cross-lane synthesis belongs exclusively to the orchestrator.
+- Prompt-governance signals feed into weekly trend analysis and monthly recomposition.
+
+M3.5 closes design and contract hardening. The live assignment engine, execution logger, orchestrator runtime observer, and operational ten-day/twenty-eight-day cycles are planned implementation work, not yet live.
+
 ## Documentation Index
 
 - [Start Here](docs/00-start-here.md)

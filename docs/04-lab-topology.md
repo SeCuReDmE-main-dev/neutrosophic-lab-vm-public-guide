@@ -45,10 +45,12 @@ The fifth workspace is the public lab orchestrator with four responsibilities:
 
 1. orchestration — sequencing workspace routines
 2. collection — gathering public traces from the four study-case lanes
-3. evaluation — normalizing and cross-referencing evidence
+3. evaluation — normalizing and cross-referencing evidence, including prompt-governance signals from delegated analysis
 4. reporting — producing daily, weekly, and reproducibility reports
 
 It is not a private hub and not a general adaptive engine. It does not write back into public repo source trees.
+
+The orchestrator also owns prompt governance: it maintains the master prompt catalog, assigns one rotating prompt per lane per day, and is the sole authority for cross-lane synthesis. Lanes consume prompts as read-only consumers and produce lane-local outputs only.
 
 ## Rerun Policy
 
