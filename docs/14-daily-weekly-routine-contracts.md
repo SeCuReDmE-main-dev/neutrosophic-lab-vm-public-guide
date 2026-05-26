@@ -193,6 +193,19 @@ The `.doc` template used by the project is treated as a structural reference, no
 
 The lab includes a prompt-governance layer that defines what each case-study lane evaluates during delegated analysis. This layer sits between persona contract integrity (M3) and daily routine readiness (M4).
 
+### What M3.5 changed
+
+Before M3.5, the public routine contract explained when delegation was allowed, but not how delegated analysis should be rotated, compared, or governed across lanes.
+
+M3.5 added:
+
+- one orchestrator-owned master prompt registry
+- four derived lane catalogs
+- one-prompt-per-lane daily assignment rules
+- a seven-day anti-repeat rule
+- a ten-day lane-coverage rule
+- a defined signal path from prompt execution into weekly and monthly synthesis
+
 ### Ownership
 
 The orchestrator owns prompt assignment across all four lanes. No lane assigns its own prompts. No lane modifies prompt content or assignment rules. Lanes consume prompts as read-only consumers.
@@ -210,9 +223,13 @@ The full catalog contains forty prompts across four lanes. The orchestrator main
 
 Each lane receives one prompt per day. Assignment uses round-robin selection with a seven-day anti-repeat rule: no prompt may be reused for the same lane within seven days. Each lane covers its full ten-prompt catalog across a ten-day cycle.
 
+When the runtime assignment engine is enabled, prompt governance replaces the old static delegated-analysis prompt source. It does not replace the five-block daily routine itself. Presence, health, and app-native proof still come first.
+
 ### Signal flow
 
 Prompt-execution records feed into weekly trend analysis (improved, degraded, no-impact, or inconclusive per lane) and monthly twenty-eight-day recomposition. Prompt-governance signals are integrated into the weekly NSS package.
+
+This signal flow is a closed contract surface in M3.5, not a claim that the public runtime already emits all of these artifacts today.
 
 ### Boundaries
 
@@ -221,6 +238,15 @@ Lane outputs remain lane-local. Cross-lane synthesis belongs exclusively to the 
 ### Maturity
 
 M3.5 closes design and contract hardening. The live assignment engine, execution logger, orchestrator runtime observer, and operational ten-day/twenty-eight-day cycles are planned implementation work, not yet live.
+
+### Public-safe interpretation
+
+Public readers should interpret M3.5 this way:
+
+- the lab now has a documented governance model for delegated analysis
+- the orchestrator is the only cross-lane authority
+- lane-local execution boundaries are explicit
+- the runtime implementation of prompt-governance automation still belongs to later milestones
 
 ## Why the public repo remains codeless
 

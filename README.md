@@ -214,6 +214,8 @@ Key properties:
 
 M3.5 closes design and contract hardening. The live assignment engine, execution logger, orchestrator runtime observer, and operational ten-day/twenty-eight-day cycles are planned implementation work, not yet live.
 
+See also: `docs/17-prompt-governance-m3-5.md`
+
 ## Documentation Index
 
 - [Start Here](docs/00-start-here.md)
@@ -233,6 +235,7 @@ M3.5 closes design and contract hardening. The live assignment engine, execution
 - [Daily and Weekly Routine Contracts](docs/14-daily-weekly-routine-contracts.md)
 - [Lab Stabilization Roadmap](docs/15-lab-stabilization-roadmap.md)
 - [How We Use GitHub Projects and Milestones](docs/16-how-we-use-github-projects-and-milestones.md)
+- [Prompt Governance (M3.5)](docs/17-prompt-governance-m3-5.md)
 
 ## Public Boundary
 

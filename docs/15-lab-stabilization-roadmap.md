@@ -112,35 +112,55 @@ Status: closed after final verified OpenClaw runtime checks. The hardened M2 ver
 
 ## M3 — Persona and Contract Integrity
 
-- [ ] M3-01 Verify the 5 required bootstrap files exist in all 5 workspaces.
-- [ ] M3-02 Verify `HEARTBEAT.md` exists only in the orchestrator lane.
-- [ ] M3-03 Verify persona file size budgets.
-- [ ] M3-04 Verify absence of excessive duplication across persona files.
-- [ ] M3-05 Verify each `AGENTS.md` reflects the real upstream role.
-- [ ] M3-06 Verify each `SOUL.md` stays bounded and non-grandiose.
-- [ ] M3-07 Verify each `USER.md` stays stable and non-volatile.
-- [ ] M3-08 Verify each `TOOLS.md` contains only safe conventions.
-- [ ] M3-09 Verify each `MEMORY.md` contains only durable facts.
-- [ ] M3-10 Verify `what I watch` exists in each workspace.
-- [ ] M3-11 Verify `what I do not do` exists in each workspace.
-- [ ] M3-12 Verify `expected outputs` exists in each workspace.
-- [ ] M3-13 Verify `abstain/escalate conditions` exists in each workspace.
-- [ ] M3-14 Verify only the orchestrator claims consolidated reporting authority.
-- [ ] M3-15 Verify public hubs do not claim global orchestration.
-- [ ] M3-16 Verify persona seeds match the current manifest.
-- [ ] M3-17 Verify persona sync from host to VM.
-- [ ] M3-18 Verify persona stability on rerun.
-- [ ] M3-19 Verify no persona file leaks secrets.
-- [ ] M3-20 Verify no persona file leaks private paths.
-- [ ] M3-21 Define the controlled persona modification procedure.
-- [ ] M3-22 Define the persona drift audit procedure.
-- [ ] M3-23 Define the persona change acceptance procedure.
-- [ ] M3-24 Define the `persona contract green` gate.
-- [ ] M3-25 Define the `orchestrator authority green` gate.
+Status: closed after final verified persona and contract checks across host seeds and VM workspaces. The closure includes live sync and rerun-stability proof. This does not mean M4+ routine readiness is complete.
+
+- [x] M3-01 Verify the 5 required bootstrap files exist in all 5 workspaces.
+- [x] M3-02 Verify `HEARTBEAT.md` exists only in the orchestrator lane.
+- [x] M3-03 Verify persona file size budgets.
+- [x] M3-04 Verify absence of excessive duplication across persona files.
+- [x] M3-05 Verify each `AGENTS.md` reflects the real upstream role.
+- [x] M3-06 Verify each `SOUL.md` stays bounded and non-grandiose.
+- [x] M3-07 Verify each `USER.md` stays stable and non-volatile.
+- [x] M3-08 Verify each `TOOLS.md` contains only safe conventions.
+- [x] M3-09 Verify each `MEMORY.md` contains only durable facts.
+- [x] M3-10 Verify `what I watch` exists in each workspace.
+- [x] M3-11 Verify `what I do not do` exists in each workspace.
+- [x] M3-12 Verify `expected outputs` exists in each workspace.
+- [x] M3-13 Verify `abstain/escalate conditions` exists in each workspace.
+- [x] M3-14 Verify only the orchestrator claims consolidated reporting authority.
+- [x] M3-15 Verify public hubs do not claim global orchestration.
+- [x] M3-16 Verify persona seeds match the current manifest.
+- [x] M3-17 Verify persona sync from host to VM.
+- [x] M3-18 Verify persona stability on rerun.
+- [x] M3-19 Verify no persona file leaks secrets.
+- [x] M3-20 Verify no persona file leaks private paths.
+- [x] M3-21 Define the controlled persona modification procedure.
+- [x] M3-22 Define the persona drift audit procedure.
+- [x] M3-23 Define the persona change acceptance procedure.
+- [x] M3-24 Define the `persona contract green` gate.
+- [x] M3-25 Define the `orchestrator authority green` gate.
+
+Closed now at M3:
+
+- all five required persona bootstrap files verified across all five workspaces
+- `HEARTBEAT.md` restricted to the orchestrator lane only
+- role, boundary, and section structure verified across persona files
+- no secret leakage and no private-path leakage in persona files
+- host-to-VM persona sync verified
+- rerun stability verified after proof hardening
+- controlled modification, drift audit, change acceptance, and green-gate procedures defined
+
+Still true after M3 closure:
+
+- M3 closes persona and contract integrity only
+- daily testing remains gated
+- M4+ routine readiness, evidence quality, and operational cycles remain later milestones
 
 ## M3.5 — Prompt Governance Design and Contract Hardening
 
 Status: design and contract hardening closed. The live assignment engine, execution logger, orchestrator runtime observer, and operational ten-day/twenty-eight-day cycles are planned implementation work, not yet live.
+
+This milestone was added to bridge the gap between M3 persona integrity and M4 daily routine readiness. It closes the governance question first so later runtime work has one public-safe contract surface to implement against.
 
 - [x] M3.5-01 Define orchestrator-owned prompt governance scope.
 - [x] M3.5-02 Define the seven shared prompt families and three lane-specific families per lane.
@@ -152,6 +172,24 @@ Status: design and contract hardening closed. The live assignment engine, execut
 - [x] M3.5-08 Define weekly trend analysis and monthly twenty-eight-day recomposition.
 - [x] M3.5-09 Define the integration contract with the routine contract model.
 - [x] M3.5-10 Define M3.5 validation criteria and closure gate.
+
+Closed now at M3.5:
+
+- orchestrator-owned authority model
+- prompt catalog structure
+- assignment and anti-repeat rules
+- weekly and monthly signal-flow design
+- integration contract with daily and weekly routine contracts
+- public-safe wording for boundaries and maturity
+
+Still remaining after M3.5:
+
+- runtime assignment
+- execution logging
+- runtime observation
+- real ten-day trial evidence
+- weekly and monthly prompt-governance operational outputs
+
 - [ ] M3.5-11 Build the live daily assignment engine.
 - [ ] M3.5-12 Build the execution logging infrastructure.
 - [ ] M3.5-13 Build the orchestrator runtime observer.
@@ -318,6 +356,12 @@ Status: design and contract hardening closed. The live assignment engine, execut
 - [ ] M9-11 Verify real execution times stay within an acceptable envelope.
 - [ ] M9-12 Verify an operator can diagnose a problem in under 10 minutes.
 - [ ] M9-13 Verify the documentation is enough to relaunch the lab after a pause.
+
+## Related Documentation
+
+For the public explanation of what M3.5 added and what remains after it, see:
+
+- `17-prompt-governance-m3-5.md`
 - [ ] M9-14 Verify the lab can be presented without improvised explanation.
 - [ ] M9-15 Verify the public surface reflects the real current state.
 - [ ] M9-16 Define the official moment to begin daily tests.
