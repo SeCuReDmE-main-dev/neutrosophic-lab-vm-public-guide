@@ -158,7 +158,7 @@ Still true after M3 closure:
 
 ## M3.5 — Prompt Governance Design and Contract Hardening
 
-Status: design and contract hardening closed. The live assignment engine, execution logger, orchestrator runtime observer, and operational ten-day/twenty-eight-day cycles are planned implementation work, not yet live.
+Status: design and contract hardening closed. The daily runtime subset required by M4 is now live: assignment, execution logging, lane-local provenance, and orchestrator-only daily synthesis. The orchestrator runtime observer, weekly trend analysis, and operational ten-day/twenty-eight-day cycles remain later work.
 
 This milestone was added to bridge the gap between M3 persona integrity and M4 daily routine readiness. It closes the governance question first so later runtime work has one public-safe contract surface to implement against.
 
@@ -184,50 +184,65 @@ Closed now at M3.5:
 
 Still remaining after M3.5:
 
-- runtime assignment
-- execution logging
 - runtime observation
 - real ten-day trial evidence
 - weekly and monthly prompt-governance operational outputs
 
-- [ ] M3.5-11 Build the live daily assignment engine.
-- [ ] M3.5-12 Build the execution logging infrastructure.
+- [x] M3.5-11 Build the live daily assignment engine.
+- [x] M3.5-12 Build the execution logging infrastructure.
 - [ ] M3.5-13 Build the orchestrator runtime observer.
 - [ ] M3.5-14 Run a ten-day trial cycle with real lane execution.
 - [ ] M3.5-15 Build the weekly trend analysis pipeline.
 - [ ] M3.5-16 Build the NSS integration pipeline for prompt-governance signals.
 - [ ] M3.5-17 Complete the first twenty-eight-day recomposition cycle.
 - [ ] M3.5-18 Verify prompt-governance signals feed into weekly and monthly synthesis.
-- [ ] M3.5-19 Verify lane outputs remain lane-local under prompt governance.
-- [ ] M3.5-20 Verify cross-lane synthesis remains exclusively orchestrator-owned.
+- [x] M3.5-19 Verify lane outputs remain lane-local under prompt governance.
+- [x] M3.5-20 Verify cross-lane synthesis remains exclusively orchestrator-owned.
 
 ## M4 — Daily Routine Readiness
 
-- [ ] M4-01 Verify the routine registry covers all 5 workspaces.
-- [ ] M4-02 Verify the 5-block daily model per app.
-- [ ] M4-03 Verify the target duration per block.
-- [ ] M4-04 Verify the 10-second cooldown between blocks.
-- [ ] M4-05 Verify block 1 pass criteria.
-- [ ] M4-06 Verify block 2 pass criteria.
-- [ ] M4-07 Verify block 3 pass criteria.
-- [ ] M4-08 Verify block 4 skip/abstain rule.
-- [ ] M4-09 Verify block 5 retry/alternate logic.
-- [ ] M4-10 Verify per-app daily state file production.
-- [ ] M4-11 Verify normalized payload production per app.
-- [ ] M4-12 Verify `daily_contract_matrix.json` production.
-- [ ] M4-13 Verify `daily_delegation_log.json` production.
-- [ ] M4-14 Verify `daily_failure_register.md` production.
-- [ ] M4-15 Verify each app proves a real behavior.
-- [ ] M4-16 Verify agents never replace proof of app health.
-- [ ] M4-17 Verify delegation starts only after health pass.
-- [ ] M4-18 Verify delegated tasks are coherent per app.
-- [ ] M4-19 Verify timeout budgets per app.
-- [ ] M4-20 Verify sequential execution order across the 4 public apps.
-- [ ] M4-21 Verify resistance to a partial lane.
-- [ ] M4-22 Verify daily orchestrator report production.
-- [ ] M4-23 Define the `daily test launch gate` checklist.
-- [ ] M4-24 Define the `daily test minimum supervision` checklist.
-- [ ] M4-25 Define the official daily start cadence.
+Status: closed after final verified daily runtime proof. Closure includes all five contract workspaces, exactly four public evidence entries, a passing orchestrator lane, governed delegated-analysis prompts, and a verifier backed by a real VM evidence bundle.
+
+- [x] M4-01 Verify the routine registry covers all 5 workspaces.
+- [x] M4-02 Verify the 5-block daily model per app.
+- [x] M4-03 Verify the target duration per block.
+- [x] M4-04 Verify the 10-second cooldown between blocks.
+- [x] M4-05 Verify block 1 pass criteria.
+- [x] M4-06 Verify block 2 pass criteria.
+- [x] M4-07 Verify block 3 pass criteria.
+- [x] M4-08 Verify block 4 skip/abstain rule.
+- [x] M4-09 Verify block 5 retry/alternate logic.
+- [x] M4-10 Verify per-app daily state file production.
+- [x] M4-11 Verify normalized payload production per app.
+- [x] M4-12 Verify `daily_contract_matrix.json` production.
+- [x] M4-13 Verify `daily_delegation_log.json` production.
+- [x] M4-14 Verify `daily_failure_register.md` production.
+- [x] M4-15 Verify each app proves a real behavior.
+- [x] M4-16 Verify agents never replace proof of app health.
+- [x] M4-17 Verify delegation starts only after health pass.
+- [x] M4-18 Verify delegated tasks are coherent per app.
+- [x] M4-19 Verify timeout budgets per app.
+- [x] M4-20 Verify sequential execution order across the 4 public apps.
+- [x] M4-21 Verify resistance to a partial lane.
+- [x] M4-22 Verify daily orchestrator report production.
+- [x] M4-23 Define the `daily test launch gate` checklist.
+- [x] M4-24 Define the `daily test minimum supervision` checklist.
+- [x] M4-25 Define the official daily start cadence.
+
+Closed now at M4:
+
+- the daily routine registry covers all five workspaces
+- the orchestrator runs as a real contract subject instead of an implicit reporter only
+- the public evidence index still exports exactly four case-study entries
+- daily reports now expose `contract_workspace_count=5` and `public_entry_count=4`
+- prompt-governance daily assignment and execution logging are operational
+- the daily verifier now checks a real VM evidence bundle before declaring M4 green
+
+Still true after M4 closure:
+
+- M5 evidence-safety closure remains later work
+- M6 weekly NSS package closure remains later work
+- M3.5 weekly and monthly prompt-governance runtime remains later work
 
 ## M5 — Evidence Safety and Data Quality
 

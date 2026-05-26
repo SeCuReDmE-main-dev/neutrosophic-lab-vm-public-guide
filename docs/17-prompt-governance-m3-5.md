@@ -81,7 +81,7 @@ This design matters because the lab is not trying to run isolated daily prompts.
 
 ## What Is Closed Now
 
-M3.5 is closed at the design and contract layer.
+M3.5 is closed at the design and contract layer, and its daily runtime subset is now active through M4.
 
 That means the public and internal documentation now agree on:
 
@@ -90,6 +90,8 @@ That means the public and internal documentation now agree on:
 - the anti-repeat and coverage rules
 - the daily, weekly, and monthly signal-flow design
 - the integration boundary with the routine contracts
+- the daily assignment and execution-log surface
+- the lane-local and orchestrator-only boundary in daily runtime output
 
 ## What Is Not Yet Live
 
@@ -97,14 +99,16 @@ M3.5 does **not** mean the full runtime implementation is already operating.
 
 The following remain later implementation work:
 
-- live prompt-assignment engine
-- prompt-execution logging infrastructure
 - orchestrator runtime observer for prompt-governance flows
 - real ten-day operational trial
 - real twenty-eight-day recomposition cycle
 - weekly prompt-governance trend outputs generated from live runs
 
-Public readers should therefore understand M3.5 as a governance milestone, not as proof that the full automation loop has already launched.
+Public readers should therefore understand M3.5 this way:
+
+- the governance model is closed
+- the daily runtime subset is now real
+- the longer-horizon weekly and monthly prompt-governance automation has not fully launched yet
 
 ## Why This Matters Publicly
 

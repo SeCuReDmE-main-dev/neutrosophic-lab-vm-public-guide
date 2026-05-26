@@ -212,9 +212,28 @@ Key properties:
 - Lane outputs remain lane-local. Cross-lane synthesis belongs exclusively to the orchestrator.
 - Prompt-governance signals feed into weekly trend analysis and monthly recomposition.
 
-M3.5 closes design and contract hardening. The live assignment engine, execution logger, orchestrator runtime observer, and operational ten-day/twenty-eight-day cycles are planned implementation work, not yet live.
+M3.5 design and contract hardening are closed. The daily runtime subset required by M4 is now live: one prompt per lane per day, seven-day anti-repeat enforcement, execution logging, lane-local provenance, and orchestrator-only daily synthesis. The orchestrator runtime observer, weekly trend analysis, ten-day trial, and twenty-eight-day recomposition remain later work.
 
 See also: `docs/17-prompt-governance-m3-5.md`
+
+## Daily Routine Readiness (M4)
+
+M4 is now closed as a verified daily routine readiness milestone.
+
+What is true now:
+
+- the routine registry covers all five workspaces
+- the four public lanes remain the only public evidence-index entries
+- the orchestrator also runs as a contract subject and appears in the daily contract matrix
+- app proof still comes before delegated analysis
+- daily contract outputs now include `daily_contract_matrix.json`, `daily_delegation_log.json`, and `daily_failure_register.md`
+- daily reports explicitly distinguish `contract_workspace_count=5` from `public_entry_count=4`
+
+What this still does not mean:
+
+- M5 evidence-safety closure is not implied
+- M6 weekly NSS package closure is not implied
+- M3.5 weekly/monthly prompt-governance runtime is not yet fully live
 
 ## Documentation Index
 

@@ -6,7 +6,7 @@ The evidence bundle is the public audit record for a lab run. It is written to:
 /home/ubuntu/openclaw-lab/exports/evidence/<run-id>/
 ```
 
-This page describes the public evidence contract that exists now. It also notes where M3.5 prompt-governance signals fit once the runtime pieces become live.
+This page describes the public evidence contract that exists now. It also notes where M3.5 prompt-governance signals fit now that the daily runtime subset is live.
 
 ## Required Files (Complete Bundle)
 
@@ -21,7 +21,7 @@ A complete evidence bundle must contain all six files:
 | `orchestrator_reports/weekly_nss_lab_report.md` | Yes | Weekly NSS-style synthesis (for weekly runs) |
 | `orchestrator_reports/reproducibility_appendix.md` | Yes | Reproducibility trace for audit |
 
-The six files above remain the required public bundle surface after M3.5. Prompt governance does not add new mandatory public files yet.
+The six files above remain the required public bundle surface after M3.5 and M4. Prompt governance does not add new mandatory top-level public files yet.
 
 ## Required Entry Fields (evidence-index.json)
 
@@ -51,13 +51,15 @@ Each entry in `evidence-index.json` must include all of:
 
 ## Prompt-Governance Signal Status
 
-M3.5 added a prompt-governance contract layer to the lab, but the live assignment engine, execution logger, and trend-analysis runtime are not yet operating.
+M3.5 added a prompt-governance contract layer to the lab. M4 now makes the daily runtime subset operational.
 
 What is true now:
 
 - the orchestrator owns the prompt-governance design
-- prompt-assignment and prompt-execution structures are defined at the contract layer
-- weekly and monthly prompt-governance signal flow is defined at the contract layer
+- one prompt per lane per day is now assigned during the daily routine
+- prompt execution is now logged for the daily routine
+- prompt-governance provenance now appears in daily orchestrator artifacts
+- weekly and monthly prompt-governance signal flow is still defined at the contract layer
 
 What is not yet required in the public bundle:
 
@@ -65,7 +67,7 @@ What is not yet required in the public bundle:
 - a standalone prompt-execution log
 - a mandatory weekly prompt-governance trend report
 
-Until the runtime implementation is live, public evidence bundles should be interpreted as app-contract and reporting evidence first. Prompt-governance signals become required public evidence only after the assignment and logging surfaces are actually operating.
+Public evidence bundles should still be interpreted as app-contract and reporting evidence first. The daily prompt-governance subset is visible through orchestrator artifacts and provenance fields, but weekly and monthly prompt-governance outputs are not yet required public evidence.
 
 ## Complete Run Criteria
 
@@ -77,7 +79,7 @@ A run is **complete** when:
 4. Every entry has a non-empty `commit_sha`, `origin`, `branch`, and `generated_at`.
 5. No entry contains forbidden path patterns (`C:`, `/mnt/c`, `${`, `C:\`).
 
-M3.5 does not change the complete-run rule above. A bundle does not become incomplete simply because prompt-governance runtime artifacts are not present yet.
+M3.5 and M4 do not change the complete-run rule above. A bundle does not become incomplete simply because standalone weekly or monthly prompt-governance artifacts are not present yet.
 
 A run is **incomplete** if:
 

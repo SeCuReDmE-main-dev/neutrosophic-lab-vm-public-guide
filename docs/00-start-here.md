@@ -13,7 +13,7 @@ The lab runs inside one Ubuntu VM. Inside that VM, five public workspaces are cr
 
 The orchestrator runs routines, collects traces, and writes reports. All runtime outputs stay inside `/home/ubuntu/openclaw-lab`.
 
-The lab also includes a prompt-governance milestone (`M3.5`) that defines how delegated analysis is assigned across the four public lanes. This is a contract and governance milestone between M3 and M4, not a claim that the full rotating prompt runtime is already live.
+The lab also includes a prompt-governance milestone (`M3.5`) that defines how delegated analysis is assigned across the four public lanes. Its daily runtime subset is now live through M4, while the heavier weekly and monthly prompt-governance automation remains later work.
 
 ## The First Command To Understand
 

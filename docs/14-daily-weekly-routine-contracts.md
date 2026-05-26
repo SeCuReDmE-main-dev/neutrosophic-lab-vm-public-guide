@@ -135,7 +135,7 @@ Delegated analysis in this lane focuses on:
 
 ## `lab-orchestrator-public`
 
-The orchestrator does not behave like a fifth study-case lane.
+The orchestrator does not behave like a fifth study-case lane, but in M4 it does run as a fifth contract subject.
 
 Its role is to:
 
@@ -159,6 +159,11 @@ The daily routine produces:
 - `daily_failure_register.md`
 
 These are evidence-oriented operational artifacts, not marketing summaries.
+
+M4 also fixes a key counting boundary:
+
+- the contract surface covers five workspaces
+- the public evidence index still covers four public case-study lanes only
 
 ## Weekly routine
 
@@ -237,7 +242,7 @@ Lane outputs remain lane-local. Cross-lane synthesis belongs exclusively to the 
 
 ### Maturity
 
-M3.5 closes design and contract hardening. The live assignment engine, execution logger, orchestrator runtime observer, and operational ten-day/twenty-eight-day cycles are planned implementation work, not yet live.
+M3.5 closes design and contract hardening. M4 now makes the daily prompt-governance subset operational: live daily assignment, execution logging, lane-local provenance, and orchestrator-only daily synthesis. The orchestrator runtime observer, weekly trend analysis, and operational ten-day/twenty-eight-day cycles remain later work.
 
 ### Public-safe interpretation
 
@@ -246,7 +251,8 @@ Public readers should interpret M3.5 this way:
 - the lab now has a documented governance model for delegated analysis
 - the orchestrator is the only cross-lane authority
 - lane-local execution boundaries are explicit
-- the runtime implementation of prompt-governance automation still belongs to later milestones
+- the daily runtime implementation now exists
+- the heavier weekly and monthly prompt-governance automation still belongs to later milestones
 
 ## Why the public repo remains codeless
 

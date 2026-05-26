@@ -6,7 +6,7 @@ The orchestrator supports three types of work:
 - weekly NSS-style report
 - manual acceptance
 
-The lab also includes a prompt-governance milestone (M3.5) that now defines how delegated analysis is scoped across the four public lanes. That governance layer is documented here as part of the routine surface, but its live runtime pieces are still later implementation work.
+The lab also includes a prompt-governance milestone (M3.5) that defines how delegated analysis is scoped across the four public lanes. Its daily runtime subset is now active as part of M4, while the heavier weekly and monthly prompt-governance flows remain later work.
 
 ## Prerequisites
 
@@ -18,14 +18,14 @@ bash ./04_VALIDATION_LAB/pipeline/install_lab_scheduler.sh openclaw-e2e-test
 
 ## Daily Routine
 
-The daily routine runs lightweight checks across the four case-study workers, aggregates evidence, and produces a daily lab report.
+The daily routine runs lightweight checks across the four case-study workers, executes the orchestrator as a fifth contract subject, aggregates evidence, and produces a daily lab report.
 
-At the public-doc level, the daily routine now sits on top of two layers:
+At the public-doc level, the daily routine now sits on top of two active layers:
 
 1. app-contract execution
-2. prompt-governance design
+2. prompt-governance daily runtime subset
 
-The app-contract layer is the active runtime backbone. Prompt governance currently defines what delegated analysis should evaluate once the rotating assignment runtime is enabled.
+The app-contract layer remains the runtime backbone. Prompt governance now actively supplies one governed delegated-analysis prompt per public lane per day, while weekly and monthly prompt-governance operations remain later work.
 
 Command:
 
@@ -39,6 +39,9 @@ Expected outputs:
 - `evidence-summary.md`
 - `orchestrator_reports/daily_lab_report.json`
 - `orchestrator_reports/daily_lab_report.md`
+- `orchestrator_reports/daily_contract_matrix.json`
+- `orchestrator_reports/daily_delegation_log.json`
+- `orchestrator_reports/daily_failure_register.md`
 
 All outputs appear under `/home/ubuntu/openclaw-lab/exports/evidence/<run-id>/`.
 
@@ -53,7 +56,7 @@ M3.5 introduced these design-level rules for delegated analysis:
 - assignment follows a seven-day anti-repeat rule
 - each lane covers its ten prompts across a ten-day cycle
 
-These rules are part of the public contract now, but the live assignment engine and execution logger are not yet declared operational in this public guide.
+These rules are now part of the live daily routine surface. What remains later is the weekly trend-analysis pipeline, the orchestrator runtime observer, the real ten-day trial cycle, and the twenty-eight-day recomposition cycle.
 
 ## Weekly Routine
 
@@ -80,7 +83,7 @@ M3.5 also defines how prompt-governance signals are intended to feed weekly synt
 - prompt-governance trends are intended to support NSS-style weekly synthesis
 - monthly twenty-eight-day recomposition is defined at the contract level
 
-These weekly and monthly prompt-governance behaviors are planned runtime work. They should not yet be read as claims that the full signal pipeline is live.
+These weekly and monthly prompt-governance behaviors are still planned runtime work. They should not be read as claims that the full signal pipeline is live.
 
 ## Manual Acceptance
 
@@ -122,12 +125,11 @@ Raw cron is a fallback only if documented and controlled. Systemd timers are pre
 
 ## Current Maturity Boundary
 
-The public routine documentation now includes M3.5 because the governance design and contract are closed. This does not mean the following are already live:
+The public routine documentation now includes M3.5 and M4 because the daily contract surface is closed. This does not mean the following are already live:
 
-- rotating prompt assignment engine
-- prompt-execution logging infrastructure
 - orchestrator runtime observer for prompt-governance flows
 - completed ten-day and twenty-eight-day operational cycles
+- weekly prompt-governance trend analysis
 
 ## Report Retention
 
